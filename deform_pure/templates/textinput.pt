@@ -1,5 +1,5 @@
 <span tal:define="name name|field.name;
-                  size size|field.widget.size;
+                  size size|getattr(field.widget, 'size', None);
                   css_class css_class|field.widget.css_class;
                   oid oid|field.oid;
                   mask mask|field.widget.mask;
