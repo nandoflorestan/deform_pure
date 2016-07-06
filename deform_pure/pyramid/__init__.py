@@ -20,25 +20,29 @@ def translator(term):
     return get_localizer(get_current_request()).translate(term)
 
 
-def includeme(config, translator=translator, template_dirs=(
-              'deform_pure:templates',
-              'deform_bootstrap:templates',
-              'deform:templates')):
-    '''Set deform up for i18n and give its template loader the correct
+def init_deform(config, translator=translator, template_dirs=(
+                'deform_pure:templates',
+                # 'deform_bootstrap:templates',
+                'deform:templates')):
+    """Set deform up for i18n and give its template loader the correct
     directory hierarchy.
-    '''
+    """
     from .. import monkeypatch_colander
     monkeypatch_colander()
 
     config.add_translation_dirs('colander:locale', 'deform:locale',)
     #    'deform_pure:locale')
-    config.add_static_view('deform', 'deform:static')
+    # config.add_static_view('deform', 'deform:static')
     config.add_static_view('deform_pure', 'deform_pure:static')
-    config.include('deform_bootstrap')
+    # config.include('deform_bootstrap')
     # dirs = tuple([resource_filename(*dir.split(':'))
     #     for dir in template_dirs])
     dirs = tuple([abspath_from_asset_spec(dir) for dir in template_dirs])
     d.Form.set_zpt_renderer(dirs, translator=translator)
+
+
+def includeme(config):
+    config.add_directive('init_deform_pure', init_deform)
 
 
 def button(title=_('Submit'), name=None, icon=None):
