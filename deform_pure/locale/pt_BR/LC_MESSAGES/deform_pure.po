@@ -1,0 +1,59 @@
+#
+# SOME DESCRIPTIVE TITLE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE 1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-07-06 16:48-0300\n"
+"PO-Revision-Date: 2016-07-06 16:56-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ./deform_pure/schema.py:33
+msgid "Cannot be in the past. Current time is ${min}"
+msgstr "Não pode ser passado. A hora atual é ${min}"
+
+#: ./deform_pure/schema.py:42
+msgid "Invalid regular expression: {}"
+msgstr "Expressão regular inválida: {}"
+
+#: ./deform_pure/schema.py:74
+msgid "${val} is not a string"
+msgstr "${val} não é uma string"
+
+#: ./deform_pure/pyramid/__init__.py:48 ./deform_pure/pyramid/views.py:56
+msgid "Submit"
+msgstr "Enviar"
+
+#: ./deform_pure/pyramid/views.py:116
+msgid ""
+"You do not pass our CSRF protection. Maybe your session expired? In any "
+"case, you must reload that page (and probably fill out the form again). "
+"Sorry..."
+msgstr ""
+"Você não passou pela proteção contra CSRF. Talvez a sessão tenha expirado."
+"Recarregue a página (e preencha o formulário novamente). Desculpe..."
+
+#: ./deform_pure/templates-modal/form.pt:24
+msgid "There was a problem with your submission"
+msgstr "Os dados não foram aceitos."
+
+#: ./deform_pure/templates-modal/form.pt:28
+msgid "Errors have been highlighted below"
+msgstr "Os erros estão destacados abaixo."
+
+#: ./deform_pure/templates/form.pt:36
+msgid "There was a problem with your submission."
+msgstr "Os dados não foram aceitos."
+
+#: ./deform_pure/templates/form.pt:38
+msgid "Errors have been highlighted below."
+msgstr "Os erros estão destacados abaixo."

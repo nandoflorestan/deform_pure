@@ -13,9 +13,10 @@ try:
 except IOError:
     CHANGES = ''
 
-requires = ['nine', 'bag>=0.3.4', 'deform']
+requires = ['nine', 'bag>=0.3.4', 'deform', 'Babel', 'lingua']
 
-setup(name='deform_pure',
+setup(
+    name='deform_pure',
     version='0.0.0',
     description="Pure CSS templates for the deform form library.",
     long_description='\n\n'.join([README, CHANGES]),
@@ -24,7 +25,8 @@ setup(name='deform_pure',
     url='https://github.com/nandoflorestan/deform_pure',
     keywords='twitter bootstrap deform styles css web forms form',
     classifiers=[  # http://pypi.python.org/pypi?:action=list_classifiers
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 4 - Beta",
+        # "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         'License :: OSI Approved :: BSD License',
         "Environment :: Web Environment",

@@ -1,0 +1,58 @@
+#
+# SOME DESCRIPTIVE TITLE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE 1.0\n"
+"POT-Creation-Date: 2016-07-06 16:48-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Generated-By: Lingua 4.9\n"
+
+#: ./deform_pure/schema.py:33
+#, python-format
+msgid "Cannot be in the past. Current time is ${min}"
+msgstr ""
+
+#: ./deform_pure/schema.py:42
+#, python-format
+msgid "Invalid regular expression: {}"
+msgstr ""
+
+#: ./deform_pure/schema.py:74
+#, python-format
+msgid "${val} is not a string"
+msgstr ""
+
+#: ./deform_pure/pyramid/__init__.py:48 ./deform_pure/pyramid/views.py:56
+msgid "Submit"
+msgstr ""
+
+#: ./deform_pure/pyramid/views.py:116
+msgid ""
+"You do not pass our CSRF protection. Maybe your session expired? In any case,"
+" you must reload that page (and probably fill out the form again). Sorry..."
+msgstr ""
+
+#: ./deform_pure/templates-modal/form.pt:24
+msgid "There was a problem with your submission"
+msgstr ""
+
+#: ./deform_pure/templates-modal/form.pt:28
+msgid "Errors have been highlighted below"
+msgstr ""
+
+#: ./deform_pure/templates/form.pt:36
+msgid "There was a problem with your submission."
+msgstr ""
+
+#: ./deform_pure/templates/form.pt:38
+msgid "Errors have been highlighted below."
+msgstr ""
