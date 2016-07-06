@@ -11,7 +11,7 @@
 	.warning {
 		color: #9F6000;
 	}
-	.error {
+	.error, .danger, .has-error {
 		color: #D8000C;
 	}
 	.validation {

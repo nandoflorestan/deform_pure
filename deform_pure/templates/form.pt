@@ -36,7 +36,7 @@
         >There was a problem with your submission</div>
       <div class="error-msg-detail" i18n:translate=""
         >Errors have been highlighted below</div>
-      <p class="error-msg">${field.errormsg}</p>
+      <p class="error-msg" tal:condition="field.errormsg">${field.errormsg}</p>
     </div>
 
     <p class="section first" tal:condition="description">

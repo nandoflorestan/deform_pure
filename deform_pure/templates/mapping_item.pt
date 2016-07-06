@@ -32,7 +32,7 @@
             tal:condition="input_append">${input_append}</span>
   </div>
 
-  <p class="help-block"
+  <div class="help-block"
      tal:define="errstr 'error-%s' % field.oid"
      tal:repeat="msg field.error.messages()"
      i18n:translate=""
@@ -40,10 +40,10 @@
      ('%s-%s' % (errstr, repeat.msg.index))"
      tal:condition="field.error and not field.widget.hidden and not field.typ.__class__.__name__=='Mapping'">
     ${msg}
-  </p>
+  </div>
 
-  <p tal:condition="field.description and not field.widget.hidden"
+  <div tal:condition="field.description and not field.widget.hidden"
      class="help-block" >
     ${field.description}
-  </p>
+  </div>
 </div>
