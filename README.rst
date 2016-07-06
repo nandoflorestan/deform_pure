@@ -12,6 +12,28 @@ TODO LINKS
 
 It also contains special widgets and functions for Deform.
 
+
+Installation
+============
+
+Here is the preferred way of enabling ``deform_pure`` on your website.
+If you are using the Pyramid web framework, at configuration time, do this::
+
+    config.include('deform_pure')
+    config.init_deform_pure()
+
+Then in your HTML template include our CSS file:
+
+.. code-block:: HTML
+
+    <link rel="stylesheet" href="${request.static_path('deform_pure:static/deform_pure.css')}" />
+
+This sets deform up for i18n (configuring a translator function and pointing
+colander and deform locale directories) and gives its template loader the
+correct directory hierarchy, so it will search for templates first in
+deform_pure, then in deform.
+
+
 Our bootstrap-compatible templates
 ==================================
 
@@ -37,7 +59,7 @@ All this has been tested against deform_bootstrap 0.2.8.
 CSS file
 ========
 
-Take a look on static/deform_bootstrap_extra.css -- it has a few improvements
+Take a look on static/deform_pure.css -- it has a few improvements
 on bootstrap's CSS so it works better with deform. The file has comments.
 
 Our new widgets
@@ -51,7 +73,7 @@ Abstract base view
 
 If you use the *Pyramid* web framework, here is a great little abstract base
 class for views that use deform: `BaseDeformView. Check it out!
-<https://github.com/nandoflorestan/deform_bootstrap_extra/blob/master/deform_bootstrap_extra/pyramid/views.py>`_
+<https://github.com/nandoflorestan/deform_pure/blob/master/deform_pure/pyramid/views.py>`_
 
 Helper functions
 ================
@@ -62,7 +84,7 @@ button()
 Use this function in a Pyramid app to easily generate a Deform button with
 translated title and optionally a bootstrap icon.
 
-    from deform_bootstrap_extra.pyramid import button
+    from deform_pure.pyramid import button
 
 lengthen()
 ----------
@@ -76,7 +98,7 @@ The ``lengthen()`` function calculates input width based on the
 maxlength (which can optionally be inferred from a SQLAlchemy model property).
 Example usage::
 
-    from deform_bootstrap_extra.helpers import lengthen
+    from deform_pure.helpers import lengthen
     import colander as c
 
     class ContactSchema(CSRFSchema):
@@ -88,7 +110,7 @@ from_now_on()
 
 This Colander validator only accepts a time in the future. Example::
 
-    from deform_bootstrap_extra.schema import from_now_on
+    from deform_pure.schema import from_now_on
     import colander as c
 
     class PromotionSchema(CSRFSchema):
@@ -103,7 +125,7 @@ Trilean
 
 A schema type that can represent true, false and null. Example::
 
-    from deform_bootstrap_extra.schema import Trilean
+    from deform_pure.schema import Trilean
     import colander as c
     import deform.widget as w
 
@@ -117,23 +139,8 @@ A schema type that can represent true, false and null. Example::
         ]))
 
 
-Installation
-============
-
-Our preferred way of enabling the whole stack is this:
-
-.. code-block:: python
-
-    # DO NOT include('deform_bootstrap')
-    config.include('deform_bootstrap_extra')
-
-This sets deform up for i18n (configuring a translator function and pointing
-colander and deform locale directories) and gives its template loader the
-correct directory hierarchy, so it will search for templates first in
-deform_bootstrap_extra, then in deform_bootstrap, finally in deform.
-
 Contribute
 ==========
 
 You can help development at
-https://github.com/nandoflorestan/deform_bootstrap_extra
+https://github.com/nandoflorestan/deform_pure
