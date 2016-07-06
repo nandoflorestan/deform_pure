@@ -1,6 +1,12 @@
 .form-group {
 	margin-bottom: 1em;
 }
+form .required::after {
+    color: #e32;
+    content: "*";
+    display: inline;
+}
+
 /* Pure extended */
 	.info {
 		color: #00529B;
@@ -12,7 +18,7 @@
 		color: #9F6000;
 	}
 	.error, .danger, .has-error {
-		color: #D8000C;
+		color: #e32;
 	}
 	.validation {
 		color: #D63301;
@@ -53,6 +59,4 @@
 	    background-color: rgb(83, 180, 79);
 	    color: #fff;
 	}
-
-
 /* END pure extended */

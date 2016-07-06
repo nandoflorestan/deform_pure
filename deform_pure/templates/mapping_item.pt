@@ -18,7 +18,6 @@
          id="req-${oid}"
          >
     ${title}
-    <span tal:condition="field.required" class="req-asterisk">*</span>
   </label>
 
   <div tal:define="input_prepend field.widget.input_prepend | None;
